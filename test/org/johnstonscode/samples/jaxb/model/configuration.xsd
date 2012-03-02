@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.example.org/xmlns/configuration" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:config="http://www.example.org/xmlns/configuration">
+
+    <element name="Configuration">
+    	<complexType>
+    		<choice minOccurs="0" maxOccurs="unbounded">
+    			<element name="property" type="config:PropertyType"></element>
+    		</choice>
+    	</complexType>
+    </element>
+    
+    <complexType name="PropertyType">
+    	<attribute name="key" type="string" use="required"></attribute>
+    	<attribute name="value" type="string" use="required"></attribute>
+    </complexType>
+</schema>
