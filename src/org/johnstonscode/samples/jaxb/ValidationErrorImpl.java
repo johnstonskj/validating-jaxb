@@ -6,7 +6,7 @@ import javax.xml.bind.ValidationEvent;
  * @author simonjo
  *
  */
-public class ValidationErrorImpl implements ValidationError {
+class ValidationErrorImpl implements ValidationError {
     
     private final Severity severity;
     private final String message;

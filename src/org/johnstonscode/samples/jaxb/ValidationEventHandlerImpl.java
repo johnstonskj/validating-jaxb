@@ -20,6 +20,9 @@ class ValidationEventHandlerImpl implements ValidationEventHandler {
         this.events = events;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public boolean handleEvent(final ValidationEvent event) {
         this.events.add(new ValidationErrorImpl(event));

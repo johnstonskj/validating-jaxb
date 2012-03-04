@@ -41,6 +41,9 @@ class DelegatingHandlerImpl extends Listener implements UnmarshallerHandler {
         this.locationMap = locationMap;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void beforeUnmarshal(Object target, Object parent) {
         super.beforeUnmarshal(target, parent);
@@ -53,6 +56,9 @@ class DelegatingHandlerImpl extends Listener implements UnmarshallerHandler {
         }
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void setDocumentLocator(Locator locator) {
         /*
@@ -62,59 +68,92 @@ class DelegatingHandlerImpl extends Listener implements UnmarshallerHandler {
         this.unmarshallerHandler.setDocumentLocator(locator);
     }
     
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void characters(char[] ch, int start, int length) throws SAXException {
         this.unmarshallerHandler.characters(ch, start, length);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void endDocument() throws SAXException {
         this.unmarshallerHandler.endDocument();
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void endElement(String uri, String localName, String qName)
             throws SAXException {
         this.unmarshallerHandler.endElement(uri, localName, qName);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void endPrefixMapping(String prefix) throws SAXException {
         this.unmarshallerHandler.endPrefixMapping(prefix);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void ignorableWhitespace(char[] ch, int start, int length)
             throws SAXException {
         this.unmarshallerHandler.ignorableWhitespace(ch, start, length);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void processingInstruction(String target, String data) throws SAXException {
         this.unmarshallerHandler.processingInstruction(target, data);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void skippedEntity(String name) throws SAXException {
         this.unmarshallerHandler.skippedEntity(name);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void startDocument() throws SAXException {
         this.unmarshallerHandler.startDocument();
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void startElement(String uri, String localName, String qName,
             Attributes atts) throws SAXException {
         this.unmarshallerHandler.startElement(uri, localName, qName, atts);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void startPrefixMapping(String prefix, String uri) throws SAXException {
         this.unmarshallerHandler.startPrefixMapping(prefix, uri);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Object getResult() throws JAXBException, IllegalStateException {
         return this.unmarshallerHandler.getResult();

@@ -209,11 +209,11 @@ public class ReportingParser<T> {
             unmarshaller.setListener(actualHandler);
     
             // Now setup SAX
-            SAXParserFactory spf = SAXParserFactory.newInstance();
+            final SAXParserFactory spf = SAXParserFactory.newInstance();
             spf.setNamespaceAware(true);
             
             // Start the SAX parser but using *our* new handler
-            XMLReader xmlReader = spf.newSAXParser().getXMLReader();
+            final XMLReader xmlReader = spf.newSAXParser().getXMLReader();
             xmlReader.setContentHandler(actualHandler);
             xmlReader.parse(input);
 
