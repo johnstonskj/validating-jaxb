@@ -99,7 +99,7 @@ public class ReportingParser<T> {
     /*
      * The Map that we use to track the location of objects in the XML.
      */
-    private Map<Object, LocationImpl> locationMap = new HashMap<Object, LocationImpl>();
+    private Map<Object, LocationImpl> locationMap;
     
     /**
      * Construct a new parser.
@@ -185,6 +185,7 @@ public class ReportingParser<T> {
     public T parse(final InputSource input, final String schemaPath, final Class<? super T> classOfT) throws ParserConfigurationException, IOException {
         this.result = null;
         this.events = new LinkedList<ValidationError>();
+        this.locationMap = new HashMap<Object, LocationImpl>();
         try {
             
             // Standard JAX-B
