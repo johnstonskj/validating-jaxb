@@ -1,0 +1,1 @@
+An example using JAX-B and SAX to get detailed validation errors with location information.
